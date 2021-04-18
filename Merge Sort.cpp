@@ -11,28 +11,15 @@ void merge(vector<int>& left, vector<int>& right, vector<int>& arr)
     while(i < left.size() && j < right.size())
     {
         if(left[i] <= right[j])
-        {
-            arr[k] = left[i];
-            i++;
-        }
+            arr[k++] = left[i++];
         else
-        {
-            arr[k] = right[j];
-            j++;
-        }
-        k++;
+            arr[k++] = right[j++];
     }
     while(j < right.size())
-    {
-        arr[k] = right[j];
-        j++; k++;
-    }
+        arr[k++] = right[j++];
     while(i < left.size())
-    {
-        arr[k] = left[i];
-        i++; k++;
-    }
-    
+        arr[k++] = left[i++];
+
 }
 
 void merge_sort(vector<int>& arr)
