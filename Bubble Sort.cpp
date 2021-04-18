@@ -4,13 +4,6 @@
 
 using namespace std;
 
-void swap(vector<int>& arr, int i, int j)
-{
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
-
 void bubble_sort(vector<int>& arr)
 {
     bool isSorted = false;
@@ -22,7 +15,7 @@ void bubble_sort(vector<int>& arr)
         {
             if(arr[i] < arr[i-1])
             {
-                swap(arr, i, i-1);
+                swap(arr[i], arr[i-1]);
                 isSorted = false;
             }
         }

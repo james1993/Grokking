@@ -4,13 +4,6 @@
 
 using namespace std;
 
-void swap(vector<int>& arr, int i, int j)
-{
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
-
 void selection_sort(vector<int>& arr)
 {
     for(int i = 0; i < arr.size(); i++)
@@ -19,7 +12,7 @@ void selection_sort(vector<int>& arr)
         for(int j = i; j < arr.size(); j++)
             if(arr[min] > arr[j]) min = j;
         
-        swap(arr, i, min);
+        swap(arr[i], arr[min]);
     }
 }
 

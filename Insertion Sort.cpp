@@ -4,13 +4,6 @@
 
 using namespace std;
 
-void swap(vector<int>& arr, int i, int j)
-{
-    int temp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = temp;
-}
-
 void insertion_sort(vector<int>& arr)
 {
     for(int i = 1; i < arr.size(); i++)
@@ -18,7 +11,7 @@ void insertion_sort(vector<int>& arr)
         int j = i;
         while(arr[j] < arr[j-1])
         {
-            swap(arr, j, j-1);
+            swap(arr[j], arr[j-1]);
             j--;
         }
     }
